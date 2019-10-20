@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h4>hello world</h4>
     <ul>
       <li v-for="(user) in users" :key="user.id">
         {{user.name}}
@@ -18,7 +19,7 @@ export default {
     }
   },
   mounted() {
-    axios.get('http://localhost:3000/api/users').then(response => {
+    axios.get('/api/users').then(response => {
       this.users = response.data;
     })
   }
